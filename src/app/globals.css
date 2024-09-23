@@ -5,7 +5,5 @@
 @tailwind utilities;
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: "Roboto Mono", system-ui;
 }
