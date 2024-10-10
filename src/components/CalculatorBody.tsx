@@ -23,7 +23,9 @@ const CalculatorBody = () => {
         const result = eval(expression); // Calculate the expression
         setCurrentValue(result);
         setExpression(result.toString());
-      } catch (error: any) {
+      }
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      catch (error: any) {
         setCurrentValue("Error");
         console.log("Key is not working", error);
       }
