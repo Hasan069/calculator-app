@@ -6,7 +6,7 @@ const CalculatorBody = () => {
   const [currentValue, setCurrentValue] = useState("");
   const [expression, setExpression] = useState("");
 
-  const handleButtonClick = (value: String) => {
+  const handleButtonClick = (value: string) => {
     // If the value is 'AC', clear the input
     if (value === "AC") {
       setCurrentValue("");
@@ -23,7 +23,7 @@ const CalculatorBody = () => {
         const result = eval(expression); // Calculate the expression
         setCurrentValue(result);
         setExpression(result.toString());
-      } catch (error) {
+      } catch (error : unknown){
         setCurrentValue("Error");
       }
     }
