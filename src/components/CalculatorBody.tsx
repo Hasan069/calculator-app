@@ -23,8 +23,9 @@ const CalculatorBody = () => {
         const result = eval(expression); // Calculate the expression
         setCurrentValue(result);
         setExpression(result.toString());
-      } catch (error : unknown){
+      } catch (error: any) {
         setCurrentValue("Error");
+        console.log("Key is not working", error);
       }
     }
     // For other buttons, update the input and expression
@@ -43,7 +44,6 @@ const CalculatorBody = () => {
             type="text"
             defaultValue={currentValue}
             className="h-12 text-2xl rounded-3xl"
-            
           />
         </div>
         <div className="">
